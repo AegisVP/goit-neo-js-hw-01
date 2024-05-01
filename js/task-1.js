@@ -3,7 +3,8 @@ const makeTransaction = (quantity, pricePerDroid) => {
 };
 
 const testTask1 = () => {
-  console.log(makeTransaction(5, 3000)); // "You ordered 5 droids worth 15000 credits!"
-  console.log(makeTransaction(3, 1000)); // "You ordered 3 droids worth 3000 credits!"
-  console.log(makeTransaction(10, 500)); // "You ordered 10 droids worth 5000 credits!"
+  document.getElementById('result').innerHTML = '';
+  logOutput(makeTransaction, 5, 3000); // "You ordered 5 droids worth 15000 credits!"
+  logOutput(makeTransaction, 3, 1000); // "You ordered 3 droids worth 3000 credits!"
+  logOutput(makeTransaction, 10, 500); // "You ordered 10 droids worth 5000 credits!"
 };

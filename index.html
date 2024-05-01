@@ -14,6 +14,17 @@
         <button type="button" onclick="testTask1()">Task 1</button>
         <button type="button" onclick="testTask2()">Task 2</button>
         <button type="button" onclick="testTask3()">Task 3</button>
+        <p id="result" style="display: block;width:800px;height:160px;border:1px solid black; background-color: black;color: rgb(4, 222, 4);padding:10px 2px;"></p>
     </body>
+
+    <script>
+        const logOutput = (func, ...attr) => {
+            const resEl = document.getElementById('result');
+
+            const res = func(...attr)
+            resEl.innerHTML = resEl.innerHTML + `#>  ${func.name}(${attr}) => ${res}<br />`;
+            console.log(res);
+        };
+    </script>
 
 </html>
